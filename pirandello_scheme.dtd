@@ -1,0 +1,24 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT novella (paragrafo)+>
+<!ATTLIST novella
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT paragrafo (frase,(commento|sentiment)+)>
+<!ATTLIST paragrafo
+  xmlns CDATA #FIXED ''
+  numero CDATA #REQUIRED>
+
+<!ELEMENT frase (#PCDATA)>
+<!ATTLIST frase
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT commento (#PCDATA)>
+<!ATTLIST commento
+  xmlns CDATA #FIXED ''
+  autore NMTOKEN #REQUIRED>
+
+<!ELEMENT sentiment (#PCDATA)>
+<!ATTLIST sentiment
+  xmlns CDATA #FIXED ''
+  autore NMTOKEN #REQUIRED>
